@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+}
+
+.player {
+    width: 90%;
+    max-width: 950px;
+
+    background-color: #f5f5f5;
+
+    padding: 55px 50px;
+
+    border-radius: 12px;
+}
+
+
+/* Progress Bar */
+
+.progress-container {
+    width: 100%;
+    height: 35px;
+
+    background-color: #d5d5d5;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+#progress {
+    width: 0%;
+    height: 100%;
+
+    background-color: #777;
+
+    border-radius: 20px;
+}
+
+
+/* Percentage */
+
+#percentage {
+    text-align: right;
+
+    font-size: 42px;
+
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+
+/* Bottom Section */
+
+.controls {
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+
+/* Play Button */
+
+#playBtn {
+    width: 70px;
+    height: 70px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background-color: #777;
+
+    color: white;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+#playBtn:hover {
+    background-color: #555;
+}
+
+
+/* File Name */
+
+#fileName {
+    flex: 1;
+
+    font-size: 38px;
+}
+
+
+/* Download Button */
+
+#downloadBtn {
+    padding: 20px 45px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background-color: #00c853;
+
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+#downloadBtn:hover {
+    background-color: #00a844;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .player {
+        padding: 35px 25px;
+    }
+
+    .controls {
+        flex-direction: column;
+    }
+
+    #fileName {
+        font-size: 28px;
+    }
+
+    #downloadBtn {
+        width: 100%;
+    }
+}
