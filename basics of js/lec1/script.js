@@ -14,9 +14,12 @@
  var d=80
  console.log(c,d);
 
+
  var c=100 // updation or reinitialisation
 
 //  console.log(c,d);
+console.log(c,d);
+
 
 //  var ram ='hii'
 //  var shy='helllo'
