@@ -1,19 +1,21 @@
-// miniproj 1.
+// miniproj 1.(insta like feature)
 
-var btn=document.querySelector('button')
-var body=document.querySelector('body')
+var con=document.querySelector('#container')
+var icon=document.querySelector('i')
 
-btn.addEventListener('click',function(){
-
-  var img=document.createElement('img')
-  img.setAttribute('src','https://images.unsplash.com/photo-1786999100475-7fce5e9b60c9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw5fHx8ZW58MHx8fHx8')
-  body.appendChild(img)
-
+con.addEventListener('dblclick',function(){
+ icon.style.transform='translate(-50%,-50%) scale(1)'
+ icon.style.transition='all ease 0.4s'
+ icon.style.opacity='1'
+ setTimeout(function(){
+  icon.style.opacity='0'
+ },1500)
+ setTimeout(function(){
+  icon.style.transform='translate(-50%,-50%) scale(0)'
   
-  setTimeout(function() {
-    img.setAttribute('src','');
-}, 2000);
-
+ },2000)
 
 })
+
+
 
