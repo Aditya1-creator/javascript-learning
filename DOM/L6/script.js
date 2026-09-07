@@ -3,6 +3,7 @@
 // cookie
 // window object 
 // child nodes
+// class list
 
 // ( explore these topics by your own )
 
@@ -74,3 +75,14 @@ sessionStorage.setItem('hero','adi')
 
 document.cookie='user=adi'
 
+// class list 
+
+var div=document.querySelector('div')
+
+div.classList.add('circle')
+
+// div.classList.remove('circle')
+
+// explore classlisty.toggle
+
+// HW- make a web page with a feature of light and dark mode with the help of classlist and localstorage 

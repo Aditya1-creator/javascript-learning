@@ -13,3 +13,20 @@ body{
     background: black;
     
 }
+div{
+    height: 200px;
+    width: 200px;
+    background-color: lightblue;
+}
+
+.circle{
+    border-radius: 50%;
+}
+.light{
+    background-color: lightblue;
+    color: red;
+}
+.dark{
+    background-color: green;
+    color: lightblue;
+}
