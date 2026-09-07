@@ -107,7 +107,7 @@ main.addEventListener('click',function(dets){
   }
   else{
     goldenvalue.isstatus='strangers'
-  }
+  }                                       // this is event bubbling parent ke event se child pe effect aayege
   
   hero()
                                      
