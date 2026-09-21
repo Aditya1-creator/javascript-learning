@@ -107,3 +107,8 @@ y.printMyname();
  let ans1= new Employee("www",29,34689)
  ans.printdetails();
  ans1.printdetails();
+
+
+//  ❌ Every object gets a copy
+
+// ✅ Every object has access to the same prototype object
