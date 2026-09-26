@@ -1,4 +1,4 @@
-   // problem - agar tumhe kai sare object create karne ho to tum sarree objects ko alag alag variable me stire karoge iss se aacha hoga tum eek class banao jo naye naye object banaegi aur wo har object apna data hold karega and last me jitne bhi methods honge wo data share karenge 
+   // problem - agar tumhe kai sare object create karne ho to tum sarree objects ko alag alag variable me store karoge iss se aacha hoga tum eek class banao jo naye naye object banaegi aur wo har object apna data hold karega and last me jitne bhi methods honge wo data share karenge 
   
   // old way 
   // constructor function (first letter capital in constructor function name )
