@@ -81,12 +81,46 @@ function decorateUserdata(data) {
 
 </div>
     `;
+   
 
     document.querySelector('#profile').innerHTML = card;
     document.querySelector('#profile').classList.remove('hidden');
     document.querySelector('#emptyState').classList.add('hidden');
 }
 
+ // repodata is an array of repository objects returned by GitHub API.
+// Each repo object contains properties like name and html_url.
+
+// slice(0, 5) selects the first 5 repositories.
+// forEach() loops through each repository one by one.
+// repo.name gives the repository name; repo.html_url gives its URL.
+
+// repoHTML += adds each repository's HTML to a string.
+// container.innerHTML displays that HTML inside the repositories div.
+// classList.remove('hidden') makes the repository heading visible.
+
+ function decoraterepodata(repodata){
+    let container = document.querySelector('#repositories');
+    let heading = document.querySelector('#repositoryHeading');
+
+    let repoHTML = "";
+
+    repodata.slice(0, 5).forEach(function(repo) {
+        repoHTML += 
+            `
+            <a href="${repo.html_url}"
+               target="_blank"
+               
+              class="text-blue-400 underline">
+              ${repo.name}
+            </a>
+            `
+        ;
+    });
+        container.innerHTML = repoHTML;
+        heading.classList.remove('hidden');
+        
+    }
 
 
 
@@ -114,9 +148,19 @@ form.addEventListener("submit", function(event) {
             console.error(error);
             alert(error.message);
         });
+        
+     getRepo(username).then(function(repodata){    // getrepo return array of repo not a single object so decorateUserdata() expects a user object, not an array of repositories so we use another function decoraterepodata to handle it .
+            decoraterepodata(repodata);
+        })
+        .catch(function(error) {
+            console.error(error);
+            alert(error.message);
+        });
 });
+  
+
 
 // getUserdata("aditya")
 //     .then(function(data) {
-//         console.log(data);
+//         console.log(data.name);
 //     });   // for testing 
